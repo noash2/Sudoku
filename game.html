@@ -1,0 +1,132 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="sudoku.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Short+Stack&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <script src="sudoku.js"></script>
+
+    <div id='levelMenu'>
+        <h1>WELCOME abcd</h1>
+        <h2>level difficulty</h2><br>
+        <button id="easyLvl" onclick="main(20)">Easy</button>
+        <button id="mediumLvl" onclick="main(40)">Medium</button>
+        <button id="hardLvl" onclick="main(60)">Hard</button>
+    </div>
+
+    <div id='board'>
+    <table>
+        <tr>
+            <td><input id='00' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='01' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='02' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='03' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='04' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='05' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='06' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='07' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='08' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='10' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='11' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='12' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='13' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='14' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='15' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='16' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='17' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='18' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='20' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='21' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='22' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='23' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='24' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='25' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='26' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='27' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='28' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='30' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='31' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='32' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='33' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='34' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='35' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='36' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='37' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='38' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='40' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='41' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='42' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='43' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='44' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='45' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='46' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='47' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='48' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='50' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='51' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='52' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='53' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='54' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='55' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='56' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='57' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='58' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='60' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='61' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='62' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='63' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='64' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='65' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='66' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='67' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='68' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='70' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='71' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='72' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='73' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='74' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='75' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='76' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='77' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='78' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+        <tr>
+            <td><input id='80' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='81' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='82' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='83' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='84' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='85' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='86' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='87' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+            <td><input id='88' type="text" onkeypress='return event.charCode >= 49 && event.charCode <= 57' maxlength="1"></td>
+        </tr>
+    </table>
+    <br><br>
+    <button id="finishBtn" onclick="gameFinished()">Finish</button>
+    <button id="againBtn" onclick="startOverGame()">Again</button>
+    </div>
+</body>
+
+</html>
